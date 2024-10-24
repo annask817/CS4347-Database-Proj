@@ -12,7 +12,7 @@ CREATE TABLE Transaction(
   trid int,
   inid int,
   exid int,
-  date Date,
+  dateOf Date,
   amount double,
   FOREIGN KEY(uid) REFERENCES User(user_id)
     ON UPDATE CASCADE  ON DELETE CASCADE,
