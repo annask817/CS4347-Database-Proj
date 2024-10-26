@@ -1,3 +1,7 @@
 user_id,user_name,user_type,user_email,time_created
-1,root,admin,root@email.com,2023-10-24
-2,John10,regular,johnsmith10@gmail.com,2024-10-24
+1,root,admin,root@email.com,2023-01-10
+1000,John10,regular,johnsmith10@gmail.com,2023-02-14
+1001,AlexOnTheGo,regular,alex_fang2000@gmail.com,2023-03-20
+1002,SophiaSpark,admin,therealsophia@hotmail.com,2023-03-22
+1003,VividViolet,regular,violetvision@yahoo.com,2023-04-01
+1004,ZaraTheZen,regular,zara.mailbox@hotmail.com,2023-04-10
