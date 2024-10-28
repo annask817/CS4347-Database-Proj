@@ -38,7 +38,7 @@ CREATE TABLE Income(
 
 CREATE TABLE Recurring(
   recurring_id int NOT NULL,
-  recurring_id DATE,
+  recurring_date DATE,
   PRIMARY KEY(recurring_id)
 );
 
