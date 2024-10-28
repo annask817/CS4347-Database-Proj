@@ -1,7 +1,7 @@
 user_id,user_name,user_type,user_email,time_created
-1,root,admin,root@email.com,2024-01-10
-1000,John10,regular,johnsmith10@gmail.com,2024-02-14
-1001,AlexOnTheGo,regular,alex_fang2000@gmail.com,2024-03-20
-1002,SophiaSpark,admin,therealsophia@hotmail.com,2024-03-22
-1003,VividViolet,regular,violetvision@yahoo.com,2024-04-01
-1004,ZaraTheZen,regular,zara.mailbox@hotmail.com,2024-04-10
+1,root,business,root@email.com,2024-01-10
+1000,John10,personal,johnsmith10@gmail.com,2024-02-14
+1001,AlexOnTheGo,business,alex_fang2000@gmail.com,2024-03-20
+1002,SophiaSpark,personal,therealsophia@hotmail.com,2024-03-22
+1003,VividViolet,business,violetvision@yahoo.com,2024-04-01
+1004,ZaraTheZen,business,zara.mailbox@hotmail.com,2024-04-10
