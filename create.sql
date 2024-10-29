@@ -9,14 +9,13 @@ CREATE TABLE User(
 
 CREATE TABLE Transaction(
   uid int NOT NULL,
-  trid int,
+  transaction_id int,
   inid int,
   exid int,
   dateOf Date,
   amount double,
+  PRIMARY KEY(transaction_id),
   FOREIGN KEY(uid) REFERENCES User(user_id)
-    ON UPDATE CASCADE  ON DELETE CASCADE,
-  FOREIGN KEY(trid) REFERENCES Transaction(transaction_id)
     ON UPDATE CASCADE  ON DELETE CASCADE,
   FOREIGN KEY(exid) REFERENCES Expense(expense_id)
     ON UPDATE CASCADE  ON DELETE SET NULL,
