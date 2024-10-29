@@ -1,4 +1,4 @@
-uid,trid,inid,exid,dateof,amount
+uid,transaction_id,inid,exid,dateof,amount
 1,100,100,,2024-01-10,1200
 1,101,,100,2024-02-10,100
 1,102,,101,2024-02-10,500
