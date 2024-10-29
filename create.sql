@@ -27,12 +27,14 @@ CREATE TABLE Transaction(
 CREATE TABLE Expense(
   expense_id int NOT NULL,
   purpose varchar(50),
+  category_name varchar(20),
   PRIMARY KEY(expense_id)
 );
 
 CREATE TABLE Income(
   income_id int NOT NULL,
   source varchar(50),
+  category_name varchar(20),
   PRIMARY KEY(income_id)
 );
 
