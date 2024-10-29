@@ -42,18 +42,6 @@ CREATE TABLE Recurring(
   PRIMARY KEY(recurring_id)
 );
 
-CREATE TABLE Category(
-  category_id int NOT NULL,
-  exid int,
-  inid int,
-  category_name varchar(20),
-  PRIMARY KEY(category_id),
-  FOREIGN KEY(exid) REFERENCES Expense(expense_id)
-    ON UPDATE CASCADE  ON DELETE SET NULL,
-  FOREIGN KEY(inid) REFERENCES Income(income_id)
-    ON UPDATE CASCADE  ON DELETE SET NULL
-);
-
 CREATE TABLE CanBe(
   trid int,
   reid int,
