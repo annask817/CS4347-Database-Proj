@@ -1,14 +1,14 @@
-income_id,source,category_name
-100,ad revenue,misc
-101,art commission,commission
-102,patreon support,misc
-103,wedding video project,commission
-104,art commission,commission
-105,barista income,salary
-106,website management income,salary
-107,base salary,salary
-108,local business project,commission
-109,promotional video,commission
-110,sponsored post commission,commission
-111,contract with small agency,commission
-112,album cover,commission
+income_id,source
+100,ad revenue
+101,art commission
+102,patreon support
+103,wedding video project
+104,art commission
+105,barista income
+106,website management income
+107,base salary
+108,local business project
+109,promotional video
+110,sponsored post commission
+111,contract with small agency
+112,album cover
