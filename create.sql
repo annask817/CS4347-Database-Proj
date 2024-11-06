@@ -10,31 +10,65 @@ CREATE TABLE User(
 CREATE TABLE Expense(
   expense_id int NOT NULL,
   purpose varchar(50),
-  category_name varchar(20),
   PRIMARY KEY(expense_id)
 );
 
 CREATE TABLE Income(
   income_id int NOT NULL,
   source varchar(50),
-  category_name varchar(20),
   PRIMARY KEY(income_id)
 );
 
-CREATE TABLE Transaction(
+CREATE TABLE Transactions(
   uid int NOT NULL,
   transaction_id int,
-  inid int,
-  exid int,
   dateOf Date,
   amount double,
   PRIMARY KEY(transaction_id),
   FOREIGN KEY(uid) REFERENCES User(user_id)
+    ON UPDATE CASCADE  ON DELETE CASCADE
+);
+
+CREATE TABLE Transaction_Expense(
+  trid int,
+  exid int,
+  FOREIGN KEY(trid) REFERENCES Transaction(transaction_id)
     ON UPDATE CASCADE  ON DELETE CASCADE,
   FOREIGN KEY(exid) REFERENCES Expense(expense_id)
-    ON UPDATE CASCADE  ON DELETE SET NULL,
+    ON UPDATE CASCADE  ON DELETE CASCADE
+);
+
+CREATE TABLE Transaction_Income(
+  trid int,
+  inid int,
+  FOREIGN KEY(trid) REFERENCES Transaction(transaction_id)
+    ON UPDATE CASCADE  ON DELETE CASCADE,
   FOREIGN KEY(inid) REFERENCES Income(income_id)
-    ON UPDATE CASCADE  ON DELETE SET NULL
+    ON UPDATE CASCADE  ON DELETE CASCADE
+);
+
+CREATE TABLE Category(
+  category_id int NOT NULL,
+  category_name varchar(20),
+  PRIMARY KEY(category_id)
+);
+
+CREATE TABLE Expense_Category(
+  catid int DEFAULT 1,
+  exid int,
+  FOREIGN KEY(catid) REFERENCES Category(category_id)
+    ON UPDATE CASCADE  ON DELETE SET DEFAULT,
+  FOREIGN KEY(exid) REFERENCES Expense(expense_id)
+    ON UPDATE CASCADE  ON DELETE CASCADE
+);
+
+CREATE TABLE Income_Category(
+  catid int DEFAULT 1,
+  inid int,
+  FOREIGN KEY(catid) REFERENCES Category(category_id)
+    ON UPDATE CASCADE  ON DELETE SET DEFAULT,
+  FOREIGN KEY(inid) REFERENCES Income(income_id)
+    ON UPDATE CASCADE  ON DELETE CASCADE
 );
 
 CREATE TABLE Recurring(
