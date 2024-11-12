@@ -21,7 +21,7 @@ CREATE TABLE Income(
   PRIMARY KEY(income_id)
 );
 
-CREATE TABLE Transaction(
+CREATE TABLE Transactions(
   uid int NOT NULL,
   transaction_id int,
   inid int,
@@ -46,7 +46,7 @@ CREATE TABLE Recurring(
 CREATE TABLE CanBe(
   trid int,
   reid int,
-  FOREIGN KEY(trid) REFERENCES Transaction(transaction_id)
+  FOREIGN KEY(trid) REFERENCES Transactions(transaction_id)
     ON UPDATE CASCADE  ON DELETE CASCADE,
   FOREIGN KEY(reid) REFERENCES Recurring(recurring_id)
     ON UPDATE CASCADE  ON DELETE CASCADE
@@ -57,6 +57,6 @@ CREATE TABLE Performs(
   trid int,
   FOREIGN KEY(uid) REFERENCES User(user_id)
     ON UPDATE CASCADE  ON DELETE CASCADE,
-  FOREIGN KEY(trid) REFERENCES Transaction(transaction_id)
+  FOREIGN KEY(trid) REFERENCES Transactions(transaction_id)
     ON UPDATE CASCADE  ON DELETE CASCADE
 );
