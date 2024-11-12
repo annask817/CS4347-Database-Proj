@@ -24,8 +24,8 @@ CREATE TABLE Income(
 CREATE TABLE Transactions(
   uid int NOT NULL,
   transaction_id int,
-  inid int,
-  exid int,
+  inid int NULL,
+  exid int NULL,
   dateOf Date,
   amount double,
   PRIMARY KEY(transaction_id),
