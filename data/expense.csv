@@ -1,16 +1,16 @@
-expense_id,purpose
-100,web hosting
-101,advertising
-102,art suplies
-103,camera equipment
-104,barista gear
-105,public transportation
-106,phone/internet bill
-107,laptop maintenence
-108,software subscription
-109,transportation
-110,advertising
-111,social media subscription
-112,lighting equipment
-113,hardware upgrade
-114,travel expense
+expense_id,purpose,category_name
+100,web hosting,misc
+101,advertising,advertising
+102,art suplies,equipment
+103,camera equipment,equipment
+104,barista gear,equipment
+105,public transportation,transportation
+106,phone/internet bill,bill
+107,laptop maintenence,equipment
+108,software subscription,subscription
+109,transportation,transportation
+110,advertising,advertising
+111,social media subscription,subscription
+112,lighting equipment,equipment
+113,hardware upgrade,equipment
+114,travel expense,transportation
