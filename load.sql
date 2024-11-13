@@ -68,20 +68,6 @@ IGNORE 1 LINES
 (catid, @inid_2)
 SET inid = CAST(REPLACE(@inid_2, '\r', '') AS SIGNED);
 
-LOAD DATA INFILE 'data/recurring.csv'
-INTO TABLE Recurring
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
-LOAD DATA INFILE 'data/canbe.csv'
-INTO TABLE CanBe
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(trid, @reid)
-SET reid = CAST(REPLACE(@reid, '\r', '') AS SIGNED);
-
 LOAD DATA INFILE 'data/performs.csv'
 INTO TABLE Performs
 FIELDS TERMINATED BY ','

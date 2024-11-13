@@ -79,23 +79,6 @@ CREATE TABLE Income_Category(
     ON UPDATE CASCADE  ON DELETE CASCADE
 );
 
-CREATE TABLE Recurring(
-  recurring_id int NOT NULL AUTO_INCREMENT,
-  recurring_date DATE,
-  PRIMARY KEY(recurring_id)
-);
-
-ALTER TABLE Recurring AUTO_INCREMENT = 100;
-
-CREATE TABLE CanBe(
-  trid int,
-  reid int,
-  FOREIGN KEY(trid) REFERENCES Transactions(transaction_id)
-    ON UPDATE CASCADE  ON DELETE CASCADE,
-  FOREIGN KEY(reid) REFERENCES Recurring(recurring_id)
-    ON UPDATE CASCADE  ON DELETE CASCADE
-);
-
 CREATE TABLE Performs(
   usid int,
   trid int,
