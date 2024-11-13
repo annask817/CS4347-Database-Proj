@@ -62,19 +62,19 @@ CREATE TABLE Category(
 );
 
 CREATE TABLE Expense_Category(
-  catid int DEFAULT 1,
+  catid int,
   exid int,
   FOREIGN KEY(catid) REFERENCES Category(category_id)
-    ON UPDATE CASCADE  ON DELETE SET DEFAULT,
+    ON UPDATE CASCADE  ON DELETE SET NULL,
   FOREIGN KEY(exid) REFERENCES Expense(expense_id)
     ON UPDATE CASCADE  ON DELETE CASCADE
 );
 
 CREATE TABLE Income_Category(
-  catid int DEFAULT 1,
+  catid int,
   inid int,
   FOREIGN KEY(catid) REFERENCES Category(category_id)
-    ON UPDATE CASCADE  ON DELETE SET DEFAULT,
+    ON UPDATE CASCADE  ON DELETE SET NULL,
   FOREIGN KEY(inid) REFERENCES Income(income_id)
     ON UPDATE CASCADE  ON DELETE CASCADE
 );
