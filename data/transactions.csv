@@ -1,4 +1,4 @@
-uid,transaction_id,dateof,amount
+usid,transaction_id,dateOf,amount
 1,100,2024-01-10,1200
 1,101,2024-02-10,100
 1,102,2024-02-10,500
